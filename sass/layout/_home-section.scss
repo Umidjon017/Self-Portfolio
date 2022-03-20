@@ -1,0 +1,51 @@
+/*-----------------
+home-section
+-----------------*/
+.home-section {
+  position: relative;
+  .full-screen {
+    padding: 50px 0;
+    min-height: 100vh;
+  }
+  .home-text {
+    flex: 0 0 50%;
+    @include max-width(50%);
+    padding: 0 15px;
+    p {
+      color: $text-black-300;
+      font-size: 18px;
+      text-transform: capitalize;
+      margin: 0;
+    }
+    h2 {
+      font-size: 55px;
+      font-weight: 700;
+      color: $text-black-900;
+      margin: 0;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      color: $text-black-700;
+      margin: 0;
+      text-transform: capitalize;
+    }
+    .btn-1 {
+      margin-top: 30px;
+    }
+  }
+  .home-img {
+    .img-box {
+      @include max-width(450px);
+      display: block;
+      margin: auto;
+      border-radius: 20%;
+      padding: 20px;
+      img {
+        width: 100%;
+        border-radius: 20%;
+        border: 10px solid transparent;
+      }
+    }
+  }
+}

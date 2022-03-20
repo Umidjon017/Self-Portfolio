@@ -1,0 +1,67 @@
+/*-----------------
+navigation menu
+-----------------*/
+.nav-menu {
+  position: fixed;
+  background-color: $bg-black-50;
+  padding: 0 15px;
+  @include measurements(left, 0, top, 0);
+  @include measurements(width, 100%, height, 100%);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  .close-nav-menu {
+    @include measurements(width, 40px, height, 40px);
+    @include measurements(font-size, 35px, line-height, 35px);
+    @include measurements(right, 15px, top, 15px);
+    display: block;
+    border-radius: 30%;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    color: $text-black-600;
+    transition: all 0.3s ease;
+    &::after {
+      border-radius: 30%;
+    }
+  }
+  .nav-menu-inner {
+    min-height: 100vh;
+    display: flex;
+    @include measurements(align-items, center, justify-content, center);
+  }
+  ul {
+    padding: 15px;
+    li {
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        display: inline-block;
+        @include measurements(font-size, 28px, font-weight, 600);
+        color: $text-black-700;
+        padding: 5px 30px;
+        text-transform: capitalize;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        &::after {
+          border-radius: 30px;
+        }
+        &.active {
+          color: $skin-color;
+        }
+      }
+    }
+  }
+  .copyright-text {
+    position: absolute;
+    @include measurements(left, -90px, top, 50%);
+    font-size: 15px;
+    color: $text-black-600;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
